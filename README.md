@@ -11,25 +11,25 @@ This is a website for route planning of public transportation in Taipei. It help
 
 ## Usage
 ### Route Search
-![search_path](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/37176d5f-32d2-4832-ba82-e395cd06c1c6)
+![search_path](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/55491f19-81a9-45c6-a6ac-b00633212b51)
 
 ### Visualization
-![visual](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/8bbbc288-2587-46e9-b530-5405207c2349)
+![visual](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/99e358dd-f5dd-448c-b7f0-7900f82210bb)
 
 ### Log in
-![login](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/4b35d447-3ada-4907-9758-a2b5f59439f3)
+![login](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/9180e1a3-36b4-41cc-bcd9-f021228f487e)
 
 ### Save Path
-![savepath](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/7c604d4c-c35e-4845-8295-5dcb1b1f25cc)
+![savepath](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/4f088c0b-9bcb-49bd-992e-5b08f28d5389)
 
 ### Load Plan
-![loadplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/f1ce67dc-f901-42f9-9835-db293430272b)
+![loadplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/5f862acd-2d59-4711-a05e-a38e8240f660)
 
 ### Delete Plan
-![deleteplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/6352e5d8-0435-4558-b34b-ea06a960e0ca)
+![deleteplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/4d9c7de8-e80f-4fe0-bd75-9f173b291c1e)
 
 ## Architecture
-![p1](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/b2bf79cc-5385-4633-92b9-637069a80de6)
+![p1](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/7d2eb0c1-fb20-4829-85da-1526b99102c5)
 
 ## Technologies Used
 ### Front-end Development:
