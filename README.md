@@ -10,6 +10,21 @@ This is a website for route planning of public transportation in Taipei. It help
 * **Favorites Path**: Users can log in, save routes as routine or custom paths, and access them on the MyPlans page.
 
 ## Usage
+### Route Search
+![search_path](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/37176d5f-32d2-4832-ba82-e395cd06c1c6)
+
+### Visualization
+![visual](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/8bbbc288-2587-46e9-b530-5405207c2349)
+
+### Log in
+![login](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/4b35d447-3ada-4907-9758-a2b5f59439f3)
+
+### Save Path
+![savepath](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/7c604d4c-c35e-4845-8295-5dcb1b1f25cc)
+
+### Load Plan
+![loadplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/f1ce67dc-f901-42f9-9835-db293430272b)
+
 
 ## Architecture
 ![p1](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/b2bf79cc-5385-4633-92b9-637069a80de6)
