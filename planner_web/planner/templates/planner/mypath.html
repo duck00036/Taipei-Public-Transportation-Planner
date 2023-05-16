@@ -1,0 +1,86 @@
+{% extends './base.html' %}
+
+{% block log_content %}
+  <div class="collapse navbar-collapse" id="navbarNav"></div>
+    <ul class="navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+      <span class="nav-link non-clickable">Hello {{ user.username }}</span>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Find Paths</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login/Signup</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <head>
+    <title>Google Maps JavaScript API Example</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mypath.css' %}">
+  </head>
+  <body onload="loadpage()" class="background">
+    {% csrf_token %}
+    <div id="block_1">
+        <div id="title_text">
+            <p>我的路徑</p>
+        </div>
+        <div id="sector_1">
+            <p class="select_text">選擇路徑類型</p>
+            <select id="select_type" class="select" onchange="type_selected()">
+                <option value="" selected disabled hidden>請選擇</option>
+                <option value="option1">日常路徑</option>
+                <option value="option2">自訂路徑</option>
+            </select>
+            <button id="load_button" class="button" onclick="load_path()" disabled>載入路徑</button>
+        </div>
+        <div id="sector_2">
+            <p class="select_text">選擇路徑名稱</p>
+            <select id="select_path" class="select" onchange="path_selected()" disabled>
+                <option value="" selected disabled hidden>請選擇</option>
+            </select>
+            <button id="delete_button" class="button" onclick="If_delete_path()" disabled>刪除路徑</button>
+        </div>
+        <div id="path_info">
+            <p id="name_text">名稱：</p>
+            <div id = "path_name">
+                <p id = "path_name_text"></p>
+            </div>
+            <p id="date_text">時間：</p>
+            <div id="path_date">
+                <p id = "path_date_text"></p>
+            </div>
+            <p id="tag_text">備註：</p>
+            <div id="path_tag">
+                <p id = "path_tag_text"></p>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+    <div id="block_2">
+        <div id="title_text">
+            <p>路徑</p>
+        </div>
+        <div class="dialog-box scrollbar">
+            <div class="dialog-content">
+                {% include './path.html' %}
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script type="text/javascript" src="{% static 'js/mypath.js' %}"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&libraries=places&callback=initMap">
+    </script>
+  </body>
+{% endblock %}

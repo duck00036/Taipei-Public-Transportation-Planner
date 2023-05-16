@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+
+{% block content %}
+  {% load static %} 
+  <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+  <div class="form_block">
+    <h2 class="title_text">Log in</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="submit_button" type="submit">Submit</button>
+    </form>
+    <div id="signup_block">
+      <p id="signup_text">沒有帳號嗎?</p>
+      <a id="signup_button" href="{% url 'register' %}">Sign up</a>
+    </div>
+  </div>
+{% endblock %}

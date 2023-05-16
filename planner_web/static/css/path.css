@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.timeline{
+  width:350px;
+  color:#342e2e;
+  padding:40px 150px;
+}
+.timeline ul{
+  list-style-type:none;
+  border-left:2px solid #dadada;
+  padding:10px 5px;
+}
+.timeline ul li{
+  padding:10px 20px;
+  position:relative;
+  width:230px;
+  height: 70px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:.5s;
+  display: flex;
+  align-items: center;
+}
+.timeline ul .station .abs_time{
+    background-color:#ffffff;
+    position:absolute;
+    top: 22px;
+    left: -80px;
+    width:50px;
+}
+.timeline ul .station .line{
+  display:inline-block;
+  color:#ffffff;
+  background-color:#000000;
+  border-radius:25px;
+  padding:2px 5px;
+  font-size:15px;
+  text-align:center;
+}
+
+.timeline ul .station .R{
+    background-color:#ca0202 !important;
+}
+
+.timeline ul .station .G{
+    background-color:#1da03a !important;
+}
+
+.timeline ul .station .BR{
+    background-color:#9b6200 !important;
+}
+
+.timeline ul .station .O{
+    background-color:#ffa600 !important;
+}
+
+.timeline ul .station .BL{
+    background-color:#002cbb !important;
+}
+
+.timeline ul .station .Y{
+    background-color:#d1c626 !important;
+}
+
+.timeline ul .station .station_name{
+    color:#000000;
+    font-size:15px;
+    padding:2px 5px;
+}
+.timeline ul li .action{
+    color:#000000;
+    font-size:15px;
+    padding:2px 5px;
+    padding-top:5px;
+}
+.timeline ul li .time{
+    color:#000000;
+    font-size:17px;
+    padding:2px 5px;
+}
+.timeline ul .station:before{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  background-color:#7b7b7b;
+  border-radius:50%;
+  left:-11px;
+  top:30px;
+  transition:.5s;
+}
+.timeline ul .station:hover{
+  background-color:#e9e9e9;
+}
+.timeline ul li:hover:before{
+  background-color:rgb(255, 217, 63);
+  box-shadow:0px 0px 10px 2px rgb(255, 217, 63);
+}
+@media (max-width:300px){
+  .timeline{
+    width:100%;
+    padding:30px 5px 30px 10px;
+  }
+  .timeline ul li .content h3{
+    color:#34ace0;
+    font-size:15px;
+  }
+}

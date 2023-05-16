@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps JavaScript API Example</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/map.css' %}">
+  </head>
+  <body onload="initMap()" class="background">
+    {% csrf_token %}
+    <div id="block_1">
+        <div id="title_text">
+            <p>台北大眾運輸路徑規劃工具</p>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="search-container">
+                <input id="searchBox" type="text" placeholder="Search location">
+            </div>
+        </div>
+        <div id="button_block">
+            <div id="button_box_1">
+                <div class = "label">
+                    <p>設定出發時間</p>
+                </div>
+                <div class="mid_element">
+                    <input id="time" type="text" placeholder="Tap to setting">
+                </div>
+                <button class = "set_button" onclick="setTime()">設為出發時間</button>
+                <div class="setted_element">
+                    <p id="setted_time"></p>
+                </div>
+            </div>
+            <div id="button_box_2">
+                <div class = "label">
+                    <p>設定出發點</p>
+                </div>
+                <div class="mid_element">
+                    <p id=start_hint>請在地圖中選取出發點</p>
+                </div>
+                <button id="start_click" class = "set_button" onclick="setLocation(start_marker,start_info,start_str,startCoord,start_point,start_IsSet,start_hint,this)">設為出發點</button>
+                <div class="setted_element">
+                    <p id="start_coord"></p>
+                </div>
+            </div>
+            <div id="button_box_3">
+                <div class = "label">
+                    <p>設定目的地</p>
+                </div>
+                <div class="mid_element">
+                    <p id=end_hint>請在地圖中選取目的地</p>
+                </div>
+                <button id="end_click" class = "set_button" onclick="setLocation(end_marker,end_info,end_str,endCoord,end_point,end_IsSet,end_hint,this)">設為目的地</button>
+                <div class="setted_element">
+                    <p id="end_coord"></p>
+                </div>
+            </div>
+            <div id="button_box_4">
+                <div class = "label">
+                    <p>計算路徑</p>
+                </div>
+                <button id="calculate" onclick="calculate()" disabled>點此計算最佳路徑</button>
+            </div>
+        </div>
+    </div>
+    <div id="block_2">
+        <div id="title_text">
+            <p>最佳路徑</p>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="dialog-box scrollbar">
+            <div class="dialog-content_auth">
+                {% include './path.html' %}
+            </div>
+        </div>
+        <button id="save_button" onclick="select_type()" disabled>
+            <p id="save_text">save</p>
+        </button>
+        {% else %}
+        <div class="dialog-box scrollbar">
+            <div class="dialog-content">
+                {% include './path.html' %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div id="overlay"></div>
+
+    <script type="text/javascript" src="{% static 'js/map.js' %}"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&libraries=places&callback=initMap">
+    </script>
+  </body>
+</html>

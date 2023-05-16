@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+
+{% block log_content %}
+  <div class="collapse navbar-collapse" id="navbarNav"></div>
+    <ul class="navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+      <span class="nav-link non-clickable">Hello {{ user.username }}</span>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'mypath' %}">My Plans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login/Signup</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% include './map.html' %}
+{% endblock %}
