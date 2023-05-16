@@ -25,6 +25,8 @@ This is a website for route planning of public transportation in Taipei. It help
 ### Load Plan
 ![loadplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/f1ce67dc-f901-42f9-9835-db293430272b)
 
+### Delete Plan
+![deleteplan](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/6352e5d8-0435-4558-b34b-ea06a960e0ca)
 
 ## Architecture
 ![p1](https://github.com/duck00036/Taipei-Public-Transportation-Planner/assets/48171500/b2bf79cc-5385-4633-92b9-637069a80de6)
